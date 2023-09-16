@@ -13,11 +13,10 @@
     <div class="wrapper">
         <div class="slider">
             <div class="slider_images">
-                <img src="./assets/img/mem1.png" alt="mem1">
-                <img src="./assets/img/mem2.png" alt="mem2">
-                <img src="./assets/img/mem3.png" alt="mem3">
-                <img src="./assets/img/mem4.jpg" alt="mem4">
-                <img src="./assets/img/mem5.jpg" alt="mem5">
+                <img src="./assets/img/mem1.jpg" alt="mem1" id="four">
+                <img src="./assets/img/mem2.png" alt="mem2" id="three">
+                <img src="./assets/img/mem3.png" alt="mem3" id="two">
+                <img src="./assets/img/mem4.jpg" alt="mem4" id="one">
             </div>
             <div class="slider_controls">
                 <div class="images_titles">
@@ -25,21 +24,25 @@
                     <div class="image_title"></div>
                     <div class="image_title"></div>
                     <div class="image_title"></div>
-                    <div class="image_title"></div>
                 </div>
                 <div class="images_controls">
-                    <input id="slide1" type="radio" name="controls" checked="checked">
-                    <input id="slide2" type="radio" name="controls">
-                    <input id="slide3" type="radio" name="controls">
-                    <input id="slide4" type="radio" name="controls">
-                    <input id="slide5" type="radio" name="controls">
-
                     <!-- navigation dots -->
-                    <label for="slide1" class="nav-dot"></label>
-                    <label for="slide2" class="nav-dot"></label>
-                    <label for="slide3" class="nav-dot"></label>
-                    <label for="slide4" class="nav-dot"></label>
-                    <label for="slide5" class="nav-dot"></label>
+                    <label for="slide1">
+                        <input id="slide1" type="radio" name="controls" checked="checked">
+                        <div id="dot-1" class="radio"></div>
+                    </label>
+                    <label for="slide2">
+                        <input id="slide2" type="radio" name="controls">
+                        <div id="dot-2" class="radio"></div>
+                    </label>
+                    <label for="slide3">
+                        <input id="slide3" type="radio" name="controls">
+                        <div id="dot-3" class="radio"></div>
+                    </label>
+                    <label for="slide4">
+                        <input id="slide4" type="radio" name="controls">
+                        <div id="dot-4" class="radio"></div>
+                    </label>
                 </div>
             </div>
         </div>
