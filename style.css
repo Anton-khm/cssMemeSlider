@@ -3,8 +3,9 @@
 }
 
 body {
-    font-family: "Arial", Helvetica, sans-serif;
+    font-family: "Forum";
     font-weight: 400;
+    font-size: 3vh;
     background-color: #25282a;
 }
 
@@ -16,43 +17,55 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 5vh;
+    padding: 5vh 5vh 0;
     max-width: 123vh;
     overflow: hidden;
+    gap: 3vh;
 }
 
 .slider_images {
     display: flex;
     max-height: 80vh;
-    /* max-width: 138vh; */
     border-radius: 1rem;
     transition: transform .5s ease;
 }
 
 img {
     max-width: 100%;
+    margin-right: 5vh;
 }
 
 .slider_controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2vh;
 }
 
 .images_titles {
     display: flex;
     max-height: 10vh;
+    max-width: 10vh;
     overflow: hidden;
 }
 
 .image_title {
-    color: white;
+    display: none;
+    color: rgb(235, 235, 235);
+    /* margin-right: 3vh; */
 }
 
 .images_controls {
     display: flex;
     justify-content: space-between;
+}
+
+label {
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 input {
@@ -62,26 +75,19 @@ input {
 .radio {
     width: 3vh;
     height: 3vh;
-    overflow: hidden;
-    margin: 1vh 1vh 0 0;
-    padding: 0;
-    opacity: 0.5;
     background-color: white;
     cursor: pointer;
-    border: 0vh solid #000;
+    border: solid #000;
     border-radius: 50%;
     display: inline-block;
     transition: background-color .4s;
 }
 
-.radio:hover {
-    /* opacity: 0.8;
-    transform: scale(1.2); */
+label:hover .radio {
     background-color: #727272;
 }
 
 label:has(input:checked) .radio {
-    color: #FFF;
     background-color: #000;
     opacity: 1;
 }
@@ -91,13 +97,44 @@ label:has(input:checked) .radio {
 }
 
 .slider:has(#slide2:checked) .slider_images {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 5vh));
 }
 
 .slider:has(#slide3:checked) .slider_images {
-    transform: translateX(-200%);
+    transform: translateX(calc(-200% - 10vh));
 }
 
 .slider:has(#slide4:checked) .slider_images {
-    transform: translateX(-300%);
+    transform: translateX(calc(-300% - 15vh));
+}
+
+.slider:has(#slide1:checked) #title1 {
+    display: block;
+}
+
+.slider:has(#slide2:checked) #title2 {
+    display: block;
+}
+
+.slider:has(#slide3:checked) #title3 {
+    display: block;
+}
+
+.slider:has(#slide4:checked) #title4 {
+    display: block;
+}
+
+@media (max-width: 500px) {
+    .slider_images {
+        max-height: 65vh;
+    }
+
+    .slider_controls {
+        flex-direction: column-reverse;
+        gap: 3vh;
+    }
+
+    .images_titles {
+        margin-right: auto;
+    }
 }
