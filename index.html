@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Slider</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="slider">
+            <div class="slider_images">
+                <img src="./assets/img/mem1.jpg" alt="mem1">
+                <img src="./assets/img/mem2.jpg" alt="mem2">
+                <img src="./assets/img/mem3.jpg" alt="mem3">
+                <img src="./assets/img/mem4.jpg" alt="mem4">
+            </div>
+            <div class="slider_controls">
+                <div class="images_titles">
+                    <div class="image_title" id="title1">Mem1</div>
+                    <div class="image_title" id="title2">Mem2</div>
+                    <div class="image_title" id="title3">Mem3</div>
+                    <div class="image_title" id="title4">Mem4</div>
+                </div>
+                <div class="images_controls">
+                    <!-- navigation dots -->
+                    <label for="slide1">
+                        <input id="slide1" type="radio" name="controls" checked="checked">
+                        <div id="dot-1" class="radio"></div>
+                    </label>
+                    <label for="slide2">
+                        <input id="slide2" type="radio" name="controls">
+                        <div id="dot-2" class="radio"></div>
+                    </label>
+                    <label for="slide3">
+                        <input id="slide3" type="radio" name="controls">
+                        <div id="dot-3" class="radio"></div>
+                    </label>
+                    <label for="slide4">
+                        <input id="slide4" type="radio" name="controls">
+                        <div id="dot-4" class="radio"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

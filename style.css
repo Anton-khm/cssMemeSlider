@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Forum";
+    font-weight: 400;
+    font-size: 3vh;
+    background-color: #25282a;
+}
+
+.wrapper {
+    display: flex;
+    padding: 0 2rem;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1rem;
+    max-width: 123vh;
+    overflow: hidden;
+    gap: 3vh;
+}
+
+.slider_images {
+    display: flex;
+    max-height: 80vh;
+    border-radius: 1rem;
+    transition: transform .5s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+.slider_controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.images_titles {
+    display: flex;
+    max-height: 10vh;
+    max-width: 10vh;
+    overflow: hidden;
+}
+
+.image_title {
+    display: none;
+    color: rgb(235, 235, 235);
+    /* margin-right: 3vh; */
+}
+
+.images_controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+.radio {
+    width: 3vh;
+    height: 3vh;
+    background-color: white;
+    cursor: pointer;
+    border: solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .4s;
+}
+
+label:hover .radio {
+    background-color: #727272;
+}
+
+label:has(input:checked) .radio {
+    background-color: #000;
+    opacity: 1;
+}
+
+.slider:has(#slide1:checked) .slider_images {
+    transform: translateX(0);
+}
+
+.slider:has(#slide2:checked) .slider_images {
+    transform: translateX(calc(-100%));
+}
+
+.slider:has(#slide3:checked) .slider_images {
+    transform: translateX(calc(-200%));
+}
+
+.slider:has(#slide4:checked) .slider_images {
+    transform: translateX(calc(-300%));
+}
+
+.slider:has(#slide1:checked) #title1 {
+    display: block;
+}
+
+.slider:has(#slide2:checked) #title2 {
+    display: block;
+}
+
+.slider:has(#slide3:checked) #title3 {
+    display: block;
+}
+
+.slider:has(#slide4:checked) #title4 {
+    display: block;
+}
+
+@media (max-width: 500px) {
+    .slider_images {
+        max-height: 65vh;
+    }
+
+    .slider_controls {
+        flex-direction: column-reverse;
+        gap: 3vh;
+    }
+
+    .images_titles {
+        margin-right: auto;
+    }
+}
